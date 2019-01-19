@@ -4,6 +4,7 @@ const express = require('express');
 const Joi = require('joi');
 const path = require('path');
 const fs = require('fs');
+const fileUpload = require('express-fileupload');
 
 //  Routes
 const login = require('./routes/login')
@@ -11,6 +12,7 @@ const upload = require('./routes/upload')
 
 //  initialize an instance of express called app.
 const app = express();
+app.use(fileUpload());
 
 //  middleware -> functions have access to request and response object.
 //  middleware is basically what express initializes prior to the requests.

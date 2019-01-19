@@ -14,6 +14,7 @@
                 <option value="profile">My Profile</option>
                 <option value="logout"> Log Out</option>
             </select>
+    </form>
     </head>
 
     <body>
@@ -22,16 +23,18 @@
             <h1> Upload a video </h1>
             <label for="Title"> Title: </label>
                 <input type="text" name="Title" id="Title">
-
-            <input type="file" name="pic" accept="video/*">
-
+            <br>
+            <input type="file" name="video">
+                
+                <br>
                 <label for="description">Description:</label>
                 <br>
                 <textarea id="add" name="add" rows="3" cols="40"></textarea>
+                <br>
 
             <label for="Tags"> Tags: </label>
+                <br>
                 <input type="text" name="Tags" id="Tags">
-                <input type="text" name="Tags:" id="Tags:">
             <section class="submission">
                 <input type="submit" value="Upload">
             </section>
