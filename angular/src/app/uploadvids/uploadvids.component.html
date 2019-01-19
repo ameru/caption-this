@@ -7,41 +7,34 @@
         <div style="width:100px;height:100px;overflow:hidden;">
             <img src="https://github.com/ameru/caption-this/blob/master/angular/images%20and%20logos/cph-profile.png?raw=true" width="100px" height="auto" alt="profile" id="profile">
         </div>
-        <form>
+    <form>
             <label for="profile">Hello, TeamWork</label>
             <select id="my profile" name="my profile">
                 <option value="profile"> </option>
                 <option value="profile">My Profile</option>
                 <option value="logout"> Log Out</option>
             </select>
-        </form>
     </head>
+
     <body>
 
-        <form action="/uploadvideo1.html" method="POST">
+        <form action="/uploadvids" method="POST">
             <h1> Upload a video </h1>
             <label for="Title"> Title: </label>
                 <input type="text" name="Title" id="Title">
-        </form>
 
-        <form action="/action_page.php">
-            <input type="file" name="pic" accept="image/*">
-            <input type="submit">
-          </form>
+            <input type="file" name="pic" accept="video/*">
 
-        <form>
                 <label for="description">Description:</label>
                 <br>
                 <textarea id="add" name="add" rows="3" cols="40"></textarea>
-        </form>
 
-        <form action="/watchlectures.html" method="POST">
             <label for="Tags"> Tags: </label>
                 <input type="text" name="Tags" id="Tags">
+                <input type="text" name="Tags:" id="Tags:">
+            <section class="submission">
+                <input type="submit" value="Upload">
+            </section>
         </form>
-        <section class="submission">
-            <input type="submit" value="Upload">
-        </section>
-
     </body>
 </html>
