@@ -16,10 +16,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(__dirname, '/angular/dist/captionthis')));
 app.use('/', login);
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
 });
 
 /* Meat/Body of our index.js code will go here. */
