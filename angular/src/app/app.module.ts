@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { WatchocobComponent } from './watchocob/watchocob.component';
+import { ContributeComponent } from './contribute/contribute.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     NavComponent,
     HomeComponent,
-    WatchocobComponent
+    WatchocobComponent,
+    ContributeComponent
   ],
   imports: [
     BrowserModule,

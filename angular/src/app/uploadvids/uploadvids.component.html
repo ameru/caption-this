@@ -15,6 +15,7 @@
                 <option value="logout"> Log Out</option>
             </select>
     </head>
+
     <body>
 
         <action="/uploadvids" method="POST">
@@ -22,6 +23,12 @@
             <label for="Title"> Title: </label>
                 <input type="text" name="Title" id="Title">
 
+        <form action="/action_page.php">
+            <input type="file" name="pic" accept="video/*">
+            <input type="submit">
+          </form>
+
+        <form>
                 <label for="description">Description:</label>
                 <br>
                 <textarea id="add" name="add" rows="3" cols="40"></textarea>
