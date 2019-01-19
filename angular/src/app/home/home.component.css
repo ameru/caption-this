@@ -57,11 +57,12 @@ ul {
     height: 450px;
     display: flex;
     overflow-x: auto;
-    /* background-color: blue; */
+    scroll-snap-type: y mandatory;
   }
   .slide {
     width: 800px;
     flex-shrink: 0;
     height: 100%;
     background-color: blue;
+    scroll-snap-align: center;
   }
