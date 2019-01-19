@@ -1,12 +1,18 @@
 .headings {
     padding: 35px;
-    color: rgb(0, 39, 165);
+    color: rgb(0, 156, 252);
     font-size: 25px;
 }
 
 #greybox {
-    background-color: rgb(205, 205, 205) ;
+    background-color: rgb(230, 228, 228) ;
     padding-bottom: 600px;
-    border-top: 5px solid  rgb(0, 39, 165); 
+    border-top: 3px solid  rgb(0, 156, 252); 
     padding-top: 50px solid  rgb(0, 39, 165);
+    margin-top: 30px;
   }
+
+.buttons button,
+.buttons a {
+  margin-right: 8px;
+}
