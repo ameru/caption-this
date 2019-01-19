@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { WatchocobComponent } from './watchocob/watchocob.component';
+import { ContributeComponent } from './contribute/contribute.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WatchocobComponent } from './watchocob/watchocob.component';
     ProfileComponent,
     NavComponent,
     HomeComponent,
-    WatchocobComponent
+    WatchocobComponent,
+    ContributeComponent
   ],
   imports: [
     BrowserModule,
