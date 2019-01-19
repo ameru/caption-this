@@ -10,9 +10,10 @@ export class WatchlecturesService {
   private _url: string = "../../../raw_videos";
 
   constructor(private http: HttpClient) { }
-
+  /*
   getVideos() {
     return this.http.get();
 
   }
+  */
 }
