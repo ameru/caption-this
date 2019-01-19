@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+        <div style="width:300px;height:150px;overflow:hidden;">
+        <img src="https://github.com/ameru/caption-this/blob/master/angular/images%20and%20logos/caption-this-logo.png?raw=true" width="300px" height="auto" alt="Caption This!" id="logo">
+        </div>
+        <div style="width:100px;height:100px;overflow:hidden;">
+            <img src="https://github.com/ameru/caption-this/blob/master/angular/images%20and%20logos/cph-profile.png?raw=true" width="100px" height="auto" alt="profile" id="profile">
+        </div>
+    <form>
+            <label for="profile">Hello, TeamWork</label>
+            <select id="my profile" name="my profile">
+                <option value="profile"> </option>
+                <option value="profile">My Profile</option>
+                <option value="logout"> Log Out</option>
+            </select>
+    </form>
+    </head>
 
     <body>
 
@@ -7,24 +23,22 @@
             <h1> Upload a video </h1>
             <label for="Title"> Title: </label>
                 <input type="text" name="Title" id="Title">
-
-        <form action="/action_page.php">
-            <input type="file" name="pic" accept="video/*">
-            <input type="submit">
-          </form>
-
-        <form>
+            <br>
+            <input type="file" name="video">
+                
+                <br>
                 <label for="description">Description:</label>
                 <br>
                 <textarea id="add" name="add" rows="3" cols="40"></textarea>
+                <br>
 
         <!-- <action="/watchlectures.html" method="POST"> -->
             <label for="Tags"> Tags: </label>
-                <input type="text" name="Tags:" id="Tags:">
-    </form>
-        <section class="submission">
-            <input type="submit" value="Upload">
-        </section>
-
+                <br>
+                <input type="text" name="Tags" id="Tags">
+            <section class="submission">
+                <input type="submit" value="Upload">
+            </section>
+        </form>
     </body>
 </html>

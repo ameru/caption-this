@@ -17,7 +17,7 @@ let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
 let videos = JSON.parse(videosAPI);
 
 router.post('/uploadvids', (req, res) => {
-    if (Object.keys(req.files).length == 0) {
+    if (Object.keys(req.files.video).length == 0) {
         return res.status(400).send('No files were uploaded.');
     }
 
@@ -36,12 +36,12 @@ router.post('/uploadvids', (req, res) => {
     
     
     // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    let video = req.files.video;
+    let video = req.body.video;
     
     // Use the mv() method to place the file somewhere on your server
-    video.mv('/raw_videos', function(err) {
+    video.mv('/raw_videos/' + videoData.Title + '.mp4', function(err) {
         if (err)
-        return res.status(500).send(err);
+            return res.status(500).send(err);
       
         res.send('Video uploaded!');
     });
@@ -51,6 +51,11 @@ router.post('/uploadvids', (req, res) => {
 
 router.get('/uploadvids/edits', (req,res) => {
     res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+router.get('/uploadvids/edits/:name', (req, res) => {
+  res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+  res.sendFile(path.join(__dirname, '/raw_videos', req.params.name+'.mp4'));
 });
 
 module.exports = router
