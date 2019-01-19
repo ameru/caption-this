@@ -23,6 +23,22 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
 });
 
+app.get('/howitworks', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+app.get('/watchlectures', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+app.get('/uploadvids', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+app.get('/watchocob', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
 /* Meat/Body of our index.js code will go here. */
 
 //  PORT (acquires a dynamic port or use default 8010)
