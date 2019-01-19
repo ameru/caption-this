@@ -6,7 +6,7 @@
 
 #greybox {
     background-color: rgb(230, 228, 228) ;
-    padding-bottom: 600px;
+    padding-bottom: 100px;
     border-top: 3px solid  rgb(0, 156, 252); 
     margin-top: 30px;
   }
@@ -55,13 +55,15 @@ ul {
   .slider {
     width: 800px;
     height: 450px;
+    margin-left: 300px;
     display: flex;
     overflow-x: auto;
-    /* background-color: blue; */
+    scroll-snap-type: y mandatory;
   }
   .slide {
     width: 800px;
     flex-shrink: 0;
     height: 100%;
     background-color: blue;
+    scroll-snap-align: center;
   }
