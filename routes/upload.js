@@ -4,11 +4,13 @@ const Joi = require('joi');
 const path = require('path');
 const fs = require('fs');
 const fileUpload = require('express-fileupload');
+const multer = require('multer');
 
 const router = express.Router();
+const upload = multer({storage: '/raw_videos/'}).single('video')
 //  initialize an instance of express called app.
 
-router.use(fileUpload());
+
 
 let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
     if (err)
@@ -17,9 +19,15 @@ let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
 let videos = JSON.parse(videosAPI);
 
 router.post('/uploadvids', (req, res) => {
-    if (Object.keys(req.files.video).length == 0) {
-        return res.status(400).send('No files were uploaded.');
-    }
+    // if (Object.keys(req.files.video).length == 0) {
+    //     return res.status(400).send('No files were uploaded.');
+    // }
+    upload(req, res, (err) => {
+        if (err){
+            return res.status(400).send('No files were uploaded.');
+        }
+        console.log(req.file);
+    });
 
     const videoData = {
         fileDir: "../../../raw_videos/" + req.body.Title + ".mp4",
@@ -39,12 +47,16 @@ router.post('/uploadvids', (req, res) => {
     let video = req.body.video;
     
     // Use the mv() method to place the file somewhere on your server
-    video.mv('/raw_videos/' + videoData.Title + '.mp4', function(err) {
-        if (err)
-            return res.status(500).send(err);
+    console.log(videoData)
+
+
+
+    // video.mv('/raw_videos/' + videoData.Title + '.mp4', function(err) {
+    //     if (err)
+    //         return res.status(500).send(err);
       
-        res.send('Video uploaded!');
-    });
+    //     res.send('Video uploaded!');
+    // });
 
     res.redirect('/watchlectures');
 });
