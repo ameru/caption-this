@@ -1,0 +1,46 @@
+Node/Express HTTP Requests
+    Login (Cal Poly Portal api simulation)  //POST REQUEST          X
+    Upload a video                          //POST REQUEST          X
+    Get Video #Sending it to user-side      //GET REQUEST           X
+    Ratings/Reviews *(less than 3 stars)*   //GET AND POST REQUEST  X
+    Captions (flagging for mods to check)   //GET AND POST REQUEST  X
+    Speech-to-Text (Hopefully?) [Not sure if something we can currently implement, will do more studying] 
+    Possible profile/point system                                   X
+    Mod/contributor/regular-user system                             X
+
+MongoDB                                                             
+    Store videos                                                    
+    Store ratings
+    Store login infos
+    Store profile
+------------------------------------------------------------------------------------------------------------------------------------------
+Sullivan:
+    Login
+    Mod/Contributor/regular-user System
+    MongoDB
+    
+Fiona:
+    Tasks:
+        Possible profile/point system
+        Ratings/Reviews
+    
+    Fiona's codewithmosh timeline:
+        Watch "The Complete Node.js Course":
+            All videos under "Getting Started"
+            All videos under "Node Module System" 
+                *Unless you have previous experience with modules from other programming languages*
+            All videos under "Building RESTful API's Using Express
+            Video 12 under "Express- Advanced Topics"
+    
+Chris:
+    Tasks:
+        Video uploading and user-requesting
+        Captions
+    
+    Chris's codewithmosh timeline:
+        Watch "The Complete Node.js Course":
+            All videos under "Getting Started"
+            All videos under "Node Module System" 
+                *Unless you have previous experience with modules from other programming languages*
+            All videos under "Building RESTful API's Using Express"
+            Video 12 under "Express- Advanced Topics"
