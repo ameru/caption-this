@@ -1,0 +1,12 @@
+.headings {
+    padding: 35px;
+    color: rgb(0, 39, 165);
+    font-size: 25px;
+}
+
+#greybox {
+    background-color: rgb(205, 205, 205) ;
+    padding-bottom: 600px;
+    border-top: 5px solid  rgb(0, 39, 165); 
+    padding-top: 50px solid  rgb(0, 39, 165);
+  }

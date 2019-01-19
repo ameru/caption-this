@@ -22,7 +22,8 @@ ul {
 .navbar a {
     float: left;
     padding: 15px;
-    color: white;
+    font-weight: bold;
+    color: rgb(3, 29, 116);
     text-decoration: none;
     font-size: 18px;
     width: 22.78%; 
