@@ -10,7 +10,9 @@ const router = express.Router();
 const upload = multer({storage: '/raw_videos/'}).single('video')
 //  initialize an instance of express called app.
 
-
+router.get('/uploadvids', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
 
 let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
     if (err)
@@ -22,12 +24,6 @@ router.post('/uploadvids', (req, res) => {
     // if (Object.keys(req.files.video).length == 0) {
     //     return res.status(400).send('No files were uploaded.');
     // }
-    upload(req, res, (err) => {
-        if (err){
-            return res.status(400).send('No files were uploaded.');
-        }
-        console.log(req.file);
-    });
 
     const videoData = {
         fileDir: "../../../raw_videos/" + req.body.Title + ".mp4",
@@ -42,9 +38,14 @@ router.post('/uploadvids', (req, res) => {
         console.log(`Successfully registered new video ${videoData.Title}.`);
     });
     
+
+    upload(req, res, (err) => {
+        if (err){
+            return res.status(400).send('No files were uploaded.');
+        }
+        console.log(req.file);
+    });
     
-    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    let video = req.files.video;
     
     // Use the mv() method to place the file somewhere on your server
     console.log(videoData)
