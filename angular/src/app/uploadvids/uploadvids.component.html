@@ -3,11 +3,17 @@
 
     <body>
 
-        <form action="/uploadvids" method="POST">
+        <action="/uploadvids" method="POST">
             <h1> Upload a video </h1>
             <label for="Title"> Title: </label>
                 <input type="text" name="Title" id="Title">
 
+        <form action="/action_page.php">
+            <input type="file" name="pic" accept="video/*">
+            <input type="submit">
+          </form>
+
+        <form>
                 <label for="description">Description:</label>
                 <br>
                 <textarea id="add" name="add" rows="3" cols="40"></textarea>
@@ -15,9 +21,10 @@
         <action="/watchlectures.html" method="POST">
             <label for="Tags"> Tags: </label>
                 <input type="text" name="Tags:" id="Tags:">
+    </form>
         <section class="submission">
             <input type="submit" value="Upload">
         </section>
-    </form>
+
     </body>
 </html>
