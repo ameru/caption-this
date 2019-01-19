@@ -4,12 +4,15 @@ import { WatchlecturesComponent } from './watchlectures/watchlectures.component'
 import { UploadvidsComponent } from './uploadvids/uploadvids.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
 import { HomeComponent } from './home/home.component';
+import { WatchocobComponent } from './watchocob/watchocob.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'howitworks', component: HowitworksComponent},
   { path: 'watchlectures', component: WatchlecturesComponent},
-  { path: 'uploadvids', component: UploadvidsComponent}
+  { path: 'uploadvids', component: UploadvidsComponent},
+  { path: 'watchocob', component: WatchocobComponent}
 ];
 
 @NgModule({
