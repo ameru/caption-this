@@ -21,17 +21,17 @@ router.post('/uploadvids', (req, res) => {
         return res.status(400).send('No files were uploaded.');
     }
 
-    const video = {
+    const videoData = {
         fileDir: "../../../raw_videos/" + req.body.Title + ".mp4",
         Title: req.body.Title,
         add: req.body.add,
         Tags: req.body.Tags
     };
-    videos.videos.push(video);
+    videos.videos.push(videoData);
     fs.writeFile('./raw_videos/videosDirectory.json', JSON.stringify(videos, null, 2), (err, data) => {
         if (err)
            return res.send(err);
-        console.log(`Successfully registered new video ${video.Title}.`);
+        console.log(`Successfully registered new video ${videoData.Title}.`);
     });
     
     
