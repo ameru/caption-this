@@ -8,6 +8,7 @@ import { WatchlecturesComponent } from './watchlectures/watchlectures.component'
 import { UploadvidsComponent } from './uploadvids/uploadvids.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponent } from './nav/nav.component';
     WatchlecturesComponent,
     UploadvidsComponent,
     ProfileComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
