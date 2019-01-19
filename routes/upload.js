@@ -3,9 +3,16 @@ const express = require('express');
 const Joi = require('joi');
 const path = require('path');
 const fs = require('fs');
+const fileUpload = require('express-fileupload');
+const multer = require('multer');
 
 const router = express.Router();
+const upload = multer({storage: '/raw_videos/'}).single('video')
 //  initialize an instance of express called app.
+
+router.get('/uploadvids', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
 
 let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
     if (err)
@@ -14,10 +21,9 @@ let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
 let videos = JSON.parse(videosAPI);
 
 router.post('/uploadvids', (req, res) => {
-    console.log(req.body.video);
-    if (Object.keys(req.body.video).length == 0) {
-        return res.status(400).send('No files were uploaded.');
-    }
+    // if (Object.keys(req.files.video).length == 0) {
+    //     return res.status(400).send('No files were uploaded.');
+    // }
 
     const videoData = {
         fileDir: "../../../raw_videos/" + req.body.Title + ".mp4",
@@ -32,17 +38,26 @@ router.post('/uploadvids', (req, res) => {
         console.log(`Successfully registered new video ${videoData.Title}.`);
     });
     
+
+    upload(req, res, (err) => {
+        if (err){
+            return res.status(400).send('No files were uploaded.');
+        }
+        console.log(req.file);
+    });
     
-    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    let video = req.files.video;
     
     // Use the mv() method to place the file somewhere on your server
-    video.mv('/raw_videos/' + videoData.Title + '.mp4', function(err) {
-        if (err)
-            return res.status(500).send(err);
+    console.log(videoData)
+
+
+
+    // video.mv('/raw_videos/' + videoData.Title + '.mp4', function(err) {
+    //     if (err)
+    //         return res.status(500).send(err);
       
-        res.send('Video uploaded!');
-    });
+    //     res.send('Video uploaded!');
+    // });
 
     res.redirect('/watchlectures');
 });
