@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { WatchocobComponent } from './watchocob/watchocob.component';
 import { ContributeComponent } from './contribute/contribute.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { ContributeComponent } from './contribute/contribute.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

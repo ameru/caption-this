@@ -7,6 +7,7 @@ const fs = require('fs');
 
 //  Routes
 const login = require('./routes/login')
+const upload = require('./routes/upload')
 
 //  initialize an instance of express called app.
 const app = express();
@@ -18,8 +19,25 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '/angular/dist/captionthis')));
 app.use('/', login);
+app.use('/', upload);
 
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+app.get('/howitworks', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+app.get('/watchlectures', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+app.get('/uploadvids', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+});
+
+app.get('/watchocob', (req, res) => {
     res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
 });
 
