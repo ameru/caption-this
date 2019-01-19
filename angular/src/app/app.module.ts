@@ -9,6 +9,7 @@ import { UploadvidsComponent } from './uploadvids/uploadvids.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { WatchocobComponent } from './watchocob/watchocob.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     UploadvidsComponent,
     ProfileComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    WatchocobComponent
   ],
   imports: [
     BrowserModule,
