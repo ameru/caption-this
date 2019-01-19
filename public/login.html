@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+        <title>Cal Poly Web Login Service</title>
+    </head>
+
+    <body>
+        <div id="container" class="center">
+            <img id="logo" src="../assets/CalPolyLogoGreen.png" class="image-center" style="width:73%;">
+
+            <form action="/login" method="POST">
+                <div id="username" style="padding: 13px 12px">
+                    <label for="fname">Username</label>
+                    <input type="text" id="fname" name="firstname" style="color:black; font-size: 14px;" placeholder="username@calpoly.edu">
+                </div>
+                <div id="password" style="padding: 13px 12px">
+                    <label for="lname">Password</label>
+                    <input type="password" id="lname" name="lastname">
+                    <a href="https://myportal.calpoly.edu/f/u36l1s55/p/AccountActivationRecoveryPortlet.u36l1n69/max/render.uP?pCm=view">Need Help?</a>
+                </div>
+                <div id="submit">
+                    <input id="submit" class="form-button" type="submit" value="Login" onclick="submit()">
+                </div>
+            </form> 
+        </div>
+    </body>
+</html>
