@@ -1,12 +1,53 @@
 .headings {
     padding: 35px;
-    color: rgb(0, 39, 165);
+    color: rgb(0, 156, 252);
     font-size: 25px;
 }
 
 #greybox {
-    background-color: rgb(205, 205, 205) ;
+    background-color: rgb(230, 228, 228) ;
     padding-bottom: 600px;
-    border-top: 5px solid  rgb(0, 39, 165); 
-    padding-top: 50px solid  rgb(0, 39, 165);
+    border-top: 3px solid  rgb(0, 156, 252); 
+    margin-top: 30px;
+  }
+
+.buttons button,
+.buttons a {
+  margin-right: 8px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.searchbycollege {
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+.searchbycollege {
+    width: 95%;
+    background-color: rgb(0, 156, 252); ;
+    overflow: auto;
+    margin-top: 25px;
+    margin-right: 25px #153ef7e9;
+  }
+
+.searchbycollege a {
+    float: left;
+    padding: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 25px;
+    width: 31.13%; 
+    text-align: center;
+  }
+
+/* Add a background color on hover */
+.searchbycollege a:hover {
+    background-color: #153ef7e9;
   }
