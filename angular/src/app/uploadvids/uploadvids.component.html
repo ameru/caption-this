@@ -19,10 +19,10 @@
 
     <body>
 
-        <form action="/uploadvids" method="POST">
+        <form (submit)="uploadvids()">
             <h1> Upload a video </h1>
-            <label for="Title"> Title: </label>
-                <input type="text" name="Title" id="Title">
+            <label for="title"> Title: </label>
+                <input type="text" [(ngModel)]="title" name="title" id="title">
             <br>
             <input type="file" name="video">
                 
