@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.4",
+    "fileupload": "^1.0.0",
     "joi": "^14.3.1",
     "ng": "^0.0.0"
   },
