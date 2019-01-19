@@ -44,7 +44,7 @@ router.post('/uploadvids', (req, res) => {
     
     
     // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    let video = req.body.video;
+    let video = req.files.video;
     
     // Use the mv() method to place the file somewhere on your server
     console.log(videoData)
