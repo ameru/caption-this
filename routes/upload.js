@@ -53,4 +53,9 @@ router.get('/uploadvids/edits', (req,res) => {
     res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
 });
 
+router.get('/uploadvids/edits/:name', (req, res) => {
+  res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+  res.sendFile(path.join(__dirname, '/raw_videos', req.params.name+'.mp4'));
+});
+
 module.exports = router
