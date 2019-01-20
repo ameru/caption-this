@@ -21,6 +21,11 @@ app.use(express.static(path.join(__dirname, '/angular/dist/captionthis')));
 app.use('/', login);
 app.use('/', upload);
 
+app.get('/contribute', (req, res) => {
+    res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
+    res.sendFile(path.join(__dirname, '/angular/images%20and%20logos', 'caption-this-logo.png'));
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
 });
