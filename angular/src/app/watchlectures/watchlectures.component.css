@@ -6,7 +6,26 @@
 
 #greybox {
     background-color: rgb(230, 228, 228) ;
-    padding-bottom: 300px;
+    padding-bottom: 10px;
     border-top: 3px solid  rgb(0, 156, 252); 
     margin-top: 30px;
+  }
+
+  .searchbar {
+      margin-left: 35px;
+  }
+
+
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 45%;
+    padding: 15px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
   }
