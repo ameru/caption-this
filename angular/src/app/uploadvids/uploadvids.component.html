@@ -4,33 +4,29 @@
     <body>
         <div id="greybox">
         <p><b class="headings">UPLOAD A VIDEO</b></p>
-        <div class="hello">
-        <form action="/uploadvids" method="POST">
-            
-            <label for="Title"> Title: </label>
-                <input type="text" name="Title" id="Title">
+            <div class="hello">
 
-        <form (submit)="uploadvids()">
-            <h1> Upload a video </h1>
-            <label for="title"> Title: </label>
-                <input type="text" [(ngModel)]="title" name="title" id="title">
-            <br>
-            <input type="file" name="video">
-                
+            <form (submit)="uploadvids()">
+                <h1> Upload a video </h1>
+                <label for="title"> Title: </label>
+                    <input type="text" [(ngModel)]="title" name="title" id="title">
                 <br>
-                <label for="description">Description:</label>
-                <br>
-                <textarea id="add" name="add" rows="3" cols="40"></textarea>
-                <br>
+                <input type="file" name="video">
+                    
+                    <br>
+                    <label for="description">Description:</label>
+                    <br>
+                    <textarea id="add" name="add" rows="3" cols="40"></textarea>
+                    <br>
 
-            <label for="Tags"> Tags: </label>
-                <br>
-                <input type="text" name="Tags" id="Tags">
-            <section class="submission">
-                <input type="submit" value="Upload">
-            </section>
-        </form>
-        </div>
+                <label for="Tags"> Tags: </label>
+                    <br>
+                    <input type="text" name="Tags" id="Tags">
+                <section class="submission">
+                    <input type="submit" value="Upload">
+                </section>
+            </form>
+            </div>
         </div>
     </body>
 </html>
