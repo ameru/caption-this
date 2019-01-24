@@ -1,16 +1,4 @@
 {
   "videos": [
-    {
-      "fileDir": "./raw_videos/Chungus-1548324666855.mp4",
-      "title": "Chungus",
-      "add": "Description",
-      "Tags": "Tags"
-    },
-    {
-      "fileDir": "./raw_videos/Chungus2-1548324682295.mp4",
-      "title": "Chungus2",
-      "add": "Description",
-      "Tags": "Tags"
-    }
   ]
 }

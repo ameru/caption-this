@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -16,6 +17,11 @@ export class UploadvidsComponent implements OnInit {
   */
 
   ngOnInit() {
+    $(document).ready(function(){
+      $("#submit").submit(function(){setTimeout(function() {
+        window.location.replace('/watchlectures');
+      },1500);});
+    });
   }
 
   /*

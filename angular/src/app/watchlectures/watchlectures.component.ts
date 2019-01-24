@@ -1,6 +1,7 @@
 import { urls } from './urls';
 import { Component, OnInit, Input} from '@angular/core';
 import videosDirectory from '../../../../raw_videos/videosDirectory.json';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-watchlectures',
@@ -15,6 +16,6 @@ export class WatchlecturesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  
   }
-
 }

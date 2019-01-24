@@ -7,12 +7,11 @@ const multer = require('multer');
 
 const router = express.Router();
 
-let date = '';
+let date = Date.now();
 
 const storage = multer.diskStorage({
     destination: './raw_videos/',
     filename: function(req, file, cb) {
-        date = Date.now()
         cb(null, req.body.title + '-' + date + path.extname(file.originalname));
     }
 });
@@ -44,10 +43,10 @@ router.post('/uploadvids', upload.single('videoUpload'), (req, res) => {
            return res.send(err);
         console.log(`Successfully registered new video ${videoData.title}.`);
     });
-    console.log('hi')
-    res.redirect('/uploadvids')
+    res.redirect('/watchlectures');
 });
 
+/*
 router.get('/uploadvids/edits', (req,res) => {
     res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
 });
@@ -56,5 +55,6 @@ router.get('/uploadvids/edits/:name', (req, res) => {
   res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
   res.sendFile(path.join(__dirname, '/raw_videos', req.params.name+'.mp4'));
 });
+*/
 
 module.exports = router

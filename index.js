@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '/angular/dist/captionthis')));
+app.use('/raw_videos', express.static(path.join(__dirname, '/raw_videos')));
 app.use('/', login);
 app.use('/', upload);
 
@@ -45,18 +46,6 @@ app.get('/uploadvids', (req, res) => {
 
 app.get('/watchocob', (req, res) => {
     res.sendFile(path.join(__dirname, '/angular/dist/captionthis', 'index.html'));
-});
-
-app.get('/raw_videos/videosDirectory.json', (req, res) => {
-    res.sendFile(path.join(__dirname, '/raw_videos/', 'videosDirectory.json'))
-});
-
-app.get('/raw_videos/Chungus-1548324666855.mp4', (req, res) => {
-    res.sendFile(path.join(__dirname, '/raw_videos/', 'Chungus-1548324666855.mp4'))
-});
-
-app.get('/raw_videos/Chungus2-1548324682295.mp4', (req, res) => {
-    res.sendFile(path.join(__dirname, '/raw_videos/', 'Chungus2-1548324682295.mp4'))
 });
 
 /* Meat/Body of our index.js code will go here. */
