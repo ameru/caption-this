@@ -10,12 +10,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UploadvidsComponent implements OnInit {
 
+  /*
   title: String = "";
   constructor(private http: HttpClient, private router: Router) { }
+  */
 
   ngOnInit() {
   }
 
+  /*
   uploadvids() {
       this.http.post('/uploadvids', {title:this.title}).toPromise().then((res) => 
       {
@@ -23,5 +26,6 @@ export class UploadvidsComponent implements OnInit {
         this.router.navigate(['/watchlectures']);
       })
   }
+  */
 
 }

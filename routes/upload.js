@@ -3,13 +3,22 @@ const express = require('express');
 const Joi = require('joi');
 const path = require('path');
 const fs = require('fs');
-const upload = require('express-fileupload');
+const multer = require('multer');
 
 const router = express.Router();
-router.use(upload()); // configure middleware
 
-router.get('/uploadvids', (req, res) => {
-    res.sendFile(path.join(__dirname, '../angular/dist/captionthis', 'index.html'));
+let date = '';
+
+const storage = multer.diskStorage({
+    destination: './raw_videos/',
+    filename: function(req, file, cb) {
+        date = Date.now()
+        cb(null, req.body.title + '-' + date + path.extname(file.originalname));
+    }
+});
+
+const upload = multer({
+    storage: storage
 });
 
 let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
@@ -18,33 +27,13 @@ let videosAPI = fs.readFileSync('./raw_videos/videosDirectory.json', (err) => {
 });
 let videos = JSON.parse(videosAPI);
 
-router.post('/uploadvids', (req, res) => {
-    console.log(req.body.title);
-    /*
-    console.log(req.files.video);
-    if(req.files.video){
-      var file = req.files.video,
-        name = file.name,
-        type = file.mimetype;
-      var uploadpath = __dirname + '/raw_videos/' + name;
-      file.mv(uploadpath,function(err){
-        if(err){
-          console.log("File Upload Failed",name,err);
-          res.send("Error Occured!")
-        }
-        else {
-          console.log("File Uploaded",name);
-          res.send('Done! Uploading files')
-        }
-      });
-    }
-    else {
-      res.send("No File selected !");
-      res.end();
-    };
-    */
+router.get('/uploadvids', (req, res) => {
+  res.sendFile(path.join(__dirname, '../angular/dist/captionthis', 'index.html'));
+});
+
+router.post('/uploadvids', upload.single('videoUpload'), (req, res) => {
     const videoData = {
-        fileDir: "../../../raw_videos/" + req.body.title + ".mp4",
+        fileDir: "./raw_videos/" + req.body.title + '-' + date + ".mp4",
         title: req.body.title,
         add: req.body.add,
         Tags: req.body.Tags
@@ -55,8 +44,8 @@ router.post('/uploadvids', (req, res) => {
            return res.send(err);
         console.log(`Successfully registered new video ${videoData.title}.`);
     });
-    
-    res.json(videoData);
+    console.log('hi')
+    res.redirect('/uploadvids')
 });
 
 router.get('/uploadvids/edits', (req,res) => {
