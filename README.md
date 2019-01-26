@@ -2,6 +2,8 @@
 
 Caption This is a website application that aids hearing impaired students in understanding course materials. The website will be an open-source platform where students can upload videos of lectures and students can contribute close-captioning to these videos, where they will then be utilized by their hearing impaired peers.
 
+**Won Best Servant Leadership Hack by Pariveda Solutions**
+
 *How it works:*
 1. Students will be notified through the Disabilities Resource Center (DRC) if there is a student in their class that has a hearing impairment.
 2. Once given the professor's permission, students in that class will have the ability to videotape the lecture and upload it onto the web app.
